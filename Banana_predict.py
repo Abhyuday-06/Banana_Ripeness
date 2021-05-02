@@ -5,7 +5,7 @@ import numpy as np
 def averagecolor(image):
     return np.mean(image, axis=(0, 1))
 
-path = "D:/AI Bootcamp/Banana predict/"
+path = "D:/Programming/Banana_Ripeness/Data/"
 trainX = []
 trainY = []
 
@@ -19,7 +19,7 @@ for label in ('Unriped','Riped', 'No Banana Found'):
         img_features = averagecolor(img_re)
         trainX.append(img_features)
         trainY.append(label)
-test = "D:/AI Bootcamp/Banana predict/Test/"
+test = "D:/Programming/Banana_Ripeness/Data/Test/"
 
 for img in os.listdir(test):
     test_img = cv2.imread(test+img)
